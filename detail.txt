@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="gallery">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <i class="fa fa-camera"></i> Gallery
+            </a>
+        </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="gallery">
+        <div class="panel-body">
+            <div class="row">
+                <?php
+
+                foreach($gallery as $image) {
+
+                    ?>
+                    <div class="col-sm-6 col-md-4"><a class="fancybox" href="admin/images/uploads/<?php echo $image->name; ?>">
+                            <div class="thumbnail"><img
+                                    style="width: 150px;"
+                                    src="admin/images/uploads/thumbs/<?php echo $image->name; ?>" alt=""/></div>
+                        </a>
+                    </div>
+
+                <?php
+
+                }
+                ?>
+            </div>       </div>
+    </div>
+</div>
